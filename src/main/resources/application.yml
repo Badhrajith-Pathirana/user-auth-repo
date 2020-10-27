@@ -1,0 +1,22 @@
+db:
+  driver: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
+  username: root
+  password:
+
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+    hibernate:
+      ddl-auto: update
+      naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    database: mysql
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
+    username: root
+    password:
+debug: true
