@@ -3,7 +3,6 @@ db:
   url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
   username: root
   password:
-
 spring:
   jpa:
     properties:
@@ -19,4 +18,12 @@ spring:
     url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
     username: root
     password:
+  application:
+    name: user-auth-app
 debug: true
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761
+server:
+  port: 8080
