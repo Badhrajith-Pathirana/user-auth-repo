@@ -1,8 +1,8 @@
 db:
   driver: com.mysql.cj.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
+  url: jdbc:mysql://172.21.0.2:3306/user_auth?createDatabaseIfNotExist=true
   username: root
-  password:
+  password: secret
 spring:
   jpa:
     properties:
@@ -14,16 +14,16 @@ spring:
     database: mysql
     show-sql: true
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/user_auth?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.21.0.2:3306/user_auth?createDatabaseIfNotExist=true
     username: root
-    password:
+    password: secret
   application:
-    name: user-auth-app
+    name: userauth
 debug: true
 eureka:
   client:
     service-url:
       default-zone: http://localhost:8761
 server:
-  port: 8080
+  port: 8089
